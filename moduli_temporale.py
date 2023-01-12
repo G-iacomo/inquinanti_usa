@@ -33,12 +33,12 @@ def stazioni_temporale(multi_grafici): #confronto stazioni inquinante per inquin
     date = s1['Date Local']
     segni_x=[]
     j = 0
-    for i in range(len(s1)):
+    for i in range(len(s1)): #segna sull'asse x solo i primi dei mesi dispari
         if ((date[i][-1]=='1') and (date[i][-2]=='0')):
             if ((j%2)==0):
                 segni_x = np.append(segni_x,date[i])
             j=j+1
-    segni_x = np.append(segni_x,date.loc[len(date)-1])
+    segni_x = np.append(segni_x,date.loc[len(date)-1]) #segna l'ultima data disponibile sull'asse x
 
     def stazioni(inquinante,etichetta):
         plt.plot(date,s1[inquinante], label='Los Angeles (LAC)',alpha=0.8)
@@ -160,14 +160,14 @@ def spettro_nazione():
     for i in range(len(inquinanti)):
         freq_plot,spettro_pot = fourier(nazione,inquinanti[i])
         plt.plot(freq_plot,spettro_pot, label=etichette[i])
-        indice_cmax = np.argmax(spettro_pot) 
+        indice_cmax = np.argmax(spettro_pot) #trova il massimo
         plt.plot(freq_plot[indice_cmax],spettro_pot[indice_cmax],'.',label='massimo')
         print('\n\n'+etichette[i]+'\nMassimo {:f}\nFreq {:f}\nPeriodo aprox. int. '.format( spettro_pot[indice_cmax], freq_plot[indice_cmax])+'{:d}'.format(int(1/freq_plot[indice_cmax]))  ) 
     plt.xlabel(r'frequenza [$d^{-1}$]')
     plt.ylabel('spettro potenza USA')
     plt.xscale('log')
     plt.yscale('log') 
-    plt.axvline(1/365, color='red',linestyle=':',alpha=0.8,label=r'frequenza $1/365$')
+    plt.axvline(1/365, color='red',linestyle=':',alpha=0.8,label=r'frequenza $1/365$') #linee frequenza esclusivamente grafiche
     plt.axvline(2/365, color='orange',linestyle=':',alpha=0.8,label=r'frequenza $2/365$')
     #plt.axvline(1/7, color='yellow',alpha=0.8,label=r'frequenza $1/7$')
     plt.legend(fontsize=12, loc='lower right', frameon=True)
