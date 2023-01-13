@@ -9,7 +9,7 @@ esemplificativi = True #default=True. per visualizzare tutti i grafici realizzab
 
 def confronto_temporale(multi_grafici):
     print('\nconfronto temporale delle stazioni californiane selezionate, inquinante per inquinante:\n')
-    mt.stazioni_temporale(multi_grafici)
+    mt.stazioni_temporale(multi_grafici) #confronto temporale stazioni inquinante per inquinante
     print('\nconfronto temporale degli stati selezionati, inquinante per inquinante:\n')
     mt.stati_temporale(multi_grafici)
     print('\nconfronto temporale degli stati selezionati:\nATTENZIONE: i dati sono stati moltiplicati a fini grafici; riferirsi alla legenda')

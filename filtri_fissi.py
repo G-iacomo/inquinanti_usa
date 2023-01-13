@@ -5,7 +5,7 @@ import moduli_filtri_fissi as mf
 ###############################################################
 #   parametri modificabili
 
-path='' #specificare la cartella di lavoro. è possibile lasciare la stringa vuota                                                                                                                       '/home/gb/Desktop/unipg/metodi_computazionali/repo_metodi_computazionali/e2/script
+path='/home/gb/Desktop/unipg/metodi_computazionali/repo_metodi_computazionali/e2/script' #specificare la cartella di lavoro. è possibile lasciare la stringa vuota                                                                                                                       '/home/gb/Desktop/unipg/metodi_computazionali/repo_metodi_computazionali/e2/script
 esemplificativi = True #default=True. per visualizzare tutti i grafici False. 
     # WARNING: se false molti grafici
 

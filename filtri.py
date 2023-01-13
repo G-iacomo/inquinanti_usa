@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 #filtri modificabili più facilmente
-#i valori dei filtri sono validi solo per i grafici prodotti con esemplificativi=True
+#i valori dei filtri attuali sono validi solo per i grafici prodotti con esemplificativi=True
 #possibilità di filtrare anche in base al modulo delle ampiezze^2 dei coefficenti 
 
 ###################################################################à

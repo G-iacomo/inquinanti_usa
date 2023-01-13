@@ -144,7 +144,7 @@ def fourier(dati,inquinante):
     indici =  np.arange(1,(coef_f.size//2)) #escludo il coef. 0 "divergente"
     coef_ps = np.absolute(coef_f[indici])**2
     coef_freq_f = nyquist*fft.rfftfreq(coef_f.size, d=1)
-    freq_plot = coef_freq_f[indici] #eventuale coef. 0
+    freq_plot = coef_freq_f[indici] 
     return freq_plot,coef_ps 
 
 
@@ -182,7 +182,7 @@ def spettro_nazione():
 
 def spettro_stati(esemplificativi):
     print('\nconfronto dello spettro di potenza dei vari inquinanti a livello statale:\n')
-    if esemplificativi==False:
+    if esemplificativi==False: 
         stati=[california,colorado,new_york,south_dakota,texas]
         nome_stati = ['california','colorado','new_york','south_dakota','texas']
     else:

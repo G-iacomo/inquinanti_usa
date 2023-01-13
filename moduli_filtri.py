@@ -20,7 +20,7 @@ def inversa(df,inquinante,filtro_freq1,filtro_amp):
     # fourier, spettro potenza log e lin
     coef_f = fft.rfft(dati)
     indici =  np.arange(1,(coef_f.size//2))
-    # indici =  np.arange(0,(coef_f.size//2)) #coef. 0. escluso per coerenza con quanto fatto precedentemente
+     #coef. 0. escluso per coerenza con quanto fatto precedentemente
     coef_ps = np.absolute(coef_f[indici])**2
     coef_freq_f = 0.5*fft.rfftfreq(coef_f.size, d=1)
     plt.figure(1)

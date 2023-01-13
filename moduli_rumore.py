@@ -58,15 +58,15 @@ def rumore(df,inquinante,filtro_freq1,filtro_amp):
     #   fit
 
     def f_rumore(f, N, beta):
-        """
-        Funzione per fit Spettro Potenza di diversi tipi di rumore
+        '''
+        Funzione per fit Spettro Potenza rumore
 
-        f    : frequenze
+        f: frequenze
         N    : normalizzazione
-        beta : esponente per dipendenza da frequenza
+        beta : esponente 
 
         return N/f^beta
-        """
+        '''
     
         return (N/f**beta)
     

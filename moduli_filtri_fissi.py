@@ -16,7 +16,7 @@ def inversa(df,inquinante):
             j=j+1
     segni_x = np.append(segni_x,date.loc[len(date)-1])
 
-    filtro_freq1 = 0.4e-2 #filtro in ampiezza
+    filtro_freq1 = 0.4e-2 #filtro in frequenza
     filtro_freq2 = 0.7e-2 #filtro in frequenza
 
     ##############################################################################
@@ -78,7 +78,7 @@ def inversa(df,inquinante):
     plt.subplot(2,1,2)
     plt.plot(tempo,dati-dati_inversa_freq2,alpha=0.8)
     media = np.mean((dati-dati_inversa_freq1))
-    plt.axhline (media,color='red',linestyle=':',alpha=0.5,label='media 2={:.2f}'.format(media)) #filtro in frequenza E AMPIEZZA
+    plt.axhline (media,color='red',linestyle=':',alpha=0.5,label='media 2={:.2f}'.format(media)) #media dei residui
     plt.xlabel('data [yyyy-mm-dd]')
     plt.ylabel('residui')
     plt.xticks(segni_x,rotation=30, ha='right')
